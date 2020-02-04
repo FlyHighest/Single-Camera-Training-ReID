@@ -1,3 +1,7 @@
-#python main_reid.py train --trainset duke5993 --testset duke5993 --save_dir ./2019test/duke5993_mcnl_tripletafter20epoch0414_test2 --max_epoch 200 --eval_step 20 --model_name="distance" --model_path resnet50.pth  --num_gpu 2 --train_batch 256 --drop 0.5 --num_instances 8 --sampler="randomidentitycamera" --margin1="0.1" --margin2="0.1" --optstep="100,200" --margin 0.3
-#python main_reid.py train --trainset duke5993 --testset duke5993 --save_dir ./2019test/duke5993_triplet_triplettest20190414_test6 --max_epoch 200 --eval_step 20 --model_name="triplet"  --model_path resnet50.pth  --num_gpu 2 --train_batch 256 --drop 0.5 --num_instances 8 --sampler="randomidentitycamera" --margin1="0.1" --margin2="0.1" --optstep="100,200" --margin 0.3
-python main_reid.py train --trainset duke --testset duke --save_dir ./2019test/duke_softmax --max_epoch 90 --eval_step 30 --drop 0.5 --train_batch 256 --num_gpu 4 --model_name softmax --sampler randomidentity --optstep="40,80"
+python main_reid.py train --trainset duke_sct --testset duke_sct --save_dir path_to_save/duke_sct_mcnl --max_epoch 200 --eval_step 20 --model_name="distance" --num_gpu 2 --train_batch 256 --num_instances 8 --sampler="randomidentitycamera" --margin1 0.1 --margin2 0.1 --optstep="100,200"
+
+python main_reid.py train --trainset duke_sct --testset duke_sct --save_dir path_to_save/duke_sct_trip --max_epoch 200 --eval_step 20 --model_name="triplet"  --num_gpu 2 --train_batch 256 --num_instances 8 --sampler="randomidentity" --margin 0.3 --optstep="100,200"
+
+python main_reid.py train --trainset market_sct --testset market_sct --save_dir path_to_save/market_sct_mcnl --max_epoch 200 --eval_step 20 --model_name="distance" --num_gpu 2 --train_batch 240 --num_instances 8 --sampler="randomidentitycamera" --margin1 0.1 --margin2 0.1 --optstep="100,200"
+
+python main_reid.py train --trainset market_sct --testset market_sct --save_dir path_to_save/market_sct_trip --max_epoch 200 --eval_step 20 --model_name="triplet"  --num_gpu 2 --train_batch 240 --num_instances 8 --sampler="randomidentity" --margin 0.3 --optstep="100,200"

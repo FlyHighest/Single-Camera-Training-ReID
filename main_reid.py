@@ -130,7 +130,7 @@ def train(**kwargs):
         distance_loss=DistanceLoss(margin=(opt.margin1,opt.margin2))
     else:
         distance_loss=DistanceLoss()
-    tri_loss = TripletLoss(margin=opt.margin,kthp=opt.kthp,kthn=opt.kthn)
+    tri_loss = TripletLoss(margin=opt.margin)
     xent_loss=nn.CrossEntropyLoss()
 
     vis=dict()

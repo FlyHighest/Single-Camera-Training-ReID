@@ -115,17 +115,7 @@ class BaseEvaluator(object):
         for i in apdict:
             apdict[i]=np.mean(apdict[i])
             r1dict[i]=r1dict[i]/myr1
-        print("Camera mAP: ")
-        temp=[]
-        for key,v in apdict.items():
-            print("{:2d}: {}".format(key,v))
-            temp.append(v)
-        temp=np.array(temp,dtype=float)
-        print("Camera mAP variance: {}".format(np.var(temp)))    
 
-        print("Camera rank-1 contribution: ")
-        for key,v in r1dict.items():
-            print("{:2d}: {}".format(key,v))
         assert num_valid_q > 0, "Error: all query identities do not appear in gallery"
         all_cmc = np.asarray(all_cmc).astype(np.float32)
                 
