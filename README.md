@@ -1,7 +1,7 @@
 # Single Camera Training for Person Re-identification
 
 This repo includes the code for [Single Camera Training for Person Re-identification](https://arxiv.org/abs/1909.10848
-). In utils/loss.py, the proposed loss term, Multi-camera Negative Loss, is implemented in class DistanceLoss. We also provide training data (DukeSCT and MarketSCT in paper) information in duke_sct.txt and market_sct.txt. 
+). In utils/loss.py, the proposed loss term, Multi-camera Negative Loss, is implemented in class DistanceLoss. We also provide training data (Duke-SCT and Market-SCT in paper) information in duke_sct.txt and market_sct.txt. 
 
 The code is based on [Cysu/open-reid](https://github.com/Cysu/open-reid).  
 
@@ -32,7 +32,7 @@ We use ResNet-50 as the backbone. A pretrained model file is needed. Please put 
 
 **3. Copy images to the above directories.**
  
-Training images used for SCT datasets are listed in market.txt and duke.txt. Query and gallery images remain the same. 
+Training images used for SCT datasets are listed in market_sct.txt and duke_sct.txt. Query and gallery images remain the same. 
 
 ## Train and test
 
